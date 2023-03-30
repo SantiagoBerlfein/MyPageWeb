@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+#botonArriba{
+    position: fixed;
+    bottom: 60px;
+    right: -100px;
+    width: 50px;
+    transition: all 0.4s;
+}
+    /*Header*/
+
+header{
+    height: 90px;
+    background-color: #4d4d5c;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tituloPrincipal{
+    text-transform: uppercase;
+    color: #6cc091;
+    font-weight: 200;
+}
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+.cerrarMenu,
+.mostrarMenu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+.mostrarMenu{
+    order: 1;
+}
+.menu a:hover,
+.mostrarMenu:hover,
+.cerrarMenu:hover{
+    color: #6cc091;
+}
+#check{
+    display: none;
+}
+.banner{
+    padding: 0 50px;
+    background-image: url(./imagenes/estudio.jpg);
+    height: 80vh;
+    background: cover;
+    background-position: center;
+}
+.banner:before{
+    content: "";
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    left: 0;
+}
+.contenidoBanner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenidoBanner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.3s;
+}
+.contenidoBanner span{
+    font-weight: 600;
+}
+.botonImg{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #6cc091;
+    margin-top: 10px;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.3s;
+}
+.botonImg:hover{
+    background: #6cc09070;
+}
+
+    /*Sobre nosotros*/
+
+.sobreNosotros{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.sobreNosotros img{
+    width: 220px;
+    height: 200px;
+    border-radius: 100%;
+    transition: 0.4s;
+}
+.sobreNosotros img:hover{
+    width: 270px;
+    height: 250px;
+}
+.sobreNosotros div{
+    padding: 30px 30px;
+}
+.sobreNosotros h4{
+    color: #4d4d5c;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+.sobreNosotros div p{
+    color: #4d4d5c87;
+    font-size: 18px;
+}
+.botonAbogados{
+    display: inline-block;
+    text-decoration: none;
+    color: #6cc091;
+    padding: 10px 30px;
+    border: 3px solid #6cc091;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+.botonAbogados:hover{
+    background-color: #6cc091;
+    color: #fff;
+}
+
+    /*Sobre nosotros 2*/
+
+.sobreNosotros2{
+    padding: 0px 50px;
+    background-color: rgba(77, 77, 92, 0.6);
+}
+.contenidoPrincipal{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 50px 50px 0px 50px;
+}
+.contenidoPrincipal div{
+    flex: 1;
+    margin: 20px 0px;
+    border-right: 2px solid rgba(255,255,255, 0.2);
+}
+#iconoSeguridad{
+    border: none;
+}
+.contenidoPrincipal div i{
+    color: #6cc091;
+}
+.contenidoPrincipal div h6{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0px;
+}
+.contenidoPrincipal div p{
+    color: rgba(255,255,255, 0.55);
+    font-size: 15px;
+}
+.botonSobreNosotros{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+    /* Formulario */
+
+.contactanos{
+    background-color: #6cc091;
+    color: #fff;
+    padding: 50px 0px;
+}
+.contactanos h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.contactanos form{
+    width: 80%;
+    margin: 0 auto;
+}
+.datosForm{
+    display: flex;
+}
+.datosForm div{
+    padding: 10px;
+    flex: 1;
+}
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+form input,
+form textarea{
+    background-color: #6cc091;
+    border-radius: 10px;
+    border: 2px solid #8dcca9;
+    padding: 10px 5px;
+    outline: 0;
+    color: #fff;
+    width: 100%;
+    transition: 0.4s;
+}
+form input:focus,
+form textarea:focus{
+    border-color: #4bae77;
+    box-shadow: 0 0 0 1px #4bae77;
+}
+form input::placeholder,
+form textarea::placeholder{
+    color: #fff;
+}
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.mensaje textarea{
+    resize: none;
+}
+.botonFormulario .botonAbogados{
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    transition: 0.4s;
+}
+.botonFormulario .botonAbogados:hover{
+    background: #4fa776ac;
+}
+
+    /* Footer */
+
+footer{
+    display: flex;
+    align-items: center;
+    background-color: #4d4d5c;
+    color: #cccccc4a;
+    padding: 20px 20px;
+    
+}
+footer div p{
+    color: #ddd;
+}
+.redesFooter{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.redesFooter2{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.redesFooter i,
+.redesFooter2 i{
+    color: #6cc091;
+    padding-right: 5px;
+    font-size: 16px;
+}
+.redesFooter2 a{
+    padding-left: 8px;
+}
+.es{
+    color: #ddd;
+    margin-left: 30px;
+}
+.en{
+    margin-left: 5px;
+    color: #6cc091;
+}
+.check1{
+    position: relative;
+    width: 50px;
+    margin-left: 5px !important;
+}
+.check1:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #aaa;
+    border-radius: 25px;
+}
+.check1:after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 2px solid #aaa;
+    box-sizing: border-box;
+}
+.check1:checked:after{
+    left: 25px;
+    border: 2px solid #6cc091;
+}
+.check1:checked:before{
+    background: #6cc091;
+}
+
+    /* Keyframes */
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+    /*Responsive*/
+
+@media (max-width:1000px){
+    /* Footer */
+    footer{
+        flex-direction: column;
+    }
+    footer div{
+        padding: 10px 0px;
+    }
+    .redesFooter2{
+        display: flex;
+        text-align: center;
+    }
+    .check1{
+        align-self: center;
+    }
+    .es{
+        margin-bottom: 8px;
+    }
+    .en{
+        margin-top: 8px;
+    }
+}
+
+@media (max-width:768px){
+    /*Header*/
+    .mostrarMenu,
+    .cerrarMenu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #4d4d5c;
+        top: 0;
+        right: -100%;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .cerrarMenu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    /*Abogados*/
+    .sobreNosotros{
+        flex-direction: column;
+    }
+    
+    /* Sobre nosotros */
+    .contenidoPrincipal{
+        flex-direction: column;
+    }
+    .contenidoPrincipal div{
+        border: none;
+    }
+
+    /* Formulario */
+    .datosForm{
+        flex-direction: column;
+    }
+}
+@media (max-width:460px){
+    #botonArriba{
+        bottom: 90px;
+        width: 40px;
+    }
+}

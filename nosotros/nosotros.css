@@ -1,0 +1,201 @@
+    /* Banner nosotros */
+
+.banner3{
+    padding: 0 50px;
+    background-image: url(../imagenes/nosotros.jpg);
+    height: 90vh;
+    background: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    margin-bottom: 30px;
+}
+.banner3:before{
+    content: "";
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    left: 0;
+}
+
+    /* Equipo */
+
+.equipo{
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    margin: 20px 20px;
+    width: 400px;
+    height: 400px;
+    background: var(--i);
+    background-size: cover;
+    overflow: hidden;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .5s;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+.content h2{
+    font-size: 20px;
+    margin: 10px 0px;
+}
+.card:hover .content{
+    opacity: 1;
+}
+
+    /* Nosotros */
+
+.nosotros{
+    margin: 70px 80px;
+}
+.nosotros h2{
+    font-size: 35px;
+}
+.nosotros h4{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.nosotros h4,
+.nosotros p{
+    font-size: 14px;
+}
+.nosotros h2,
+.nosotros h4,
+.nosotros p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+    /* Abogados */
+    
+.abogados{
+    display: flex;
+    margin: 60px 80px;
+}
+.textoAbogados{
+    margin-left: 25px;
+}
+.textoAbogados h4{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.textoAbogados p{
+    padding-bottom: 15px;
+    border-bottom: 3px solid #6cc091;
+}
+.textoAbogados ul li{
+    margin: 15px 35px;
+    font-size: 14px;
+}
+.asideAbogados img{
+    width: 400px;
+    height: 460px;
+    margin-bottom: 25px;
+}
+.imagenJorge{
+    width: 450px !important;
+    height: 400px !important;
+}
+.asideAbogados h3{
+    font-size: 23px;
+}
+.asideAbogados p{
+    margin-top: 5px;
+}
+.asideAbogados div{
+    margin-top: 25px;
+}
+.asideAbogados div p{
+    font-size: 14px;
+    margin: 15px 0px;
+}
+.asideAbogados div p b{
+    margin-right: 15px;
+}
+.ulSimon{
+    border-bottom: 3px solid #6cc091;
+    margin-bottom: 15px;
+}
+.pSimon{
+    margin-left: 18px;
+    border-bottom: none !important;
+}
+.pFelipe{
+    border-bottom: none !important;
+}
+
+    /* Responsive */
+
+@media (max-width:1200px){
+    .equipo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:900px){
+    .abogados{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .textoAbogados{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:768px){
+    .abogados{
+        margin: 30px 50px;
+    }
+    .nosotros{
+        margin: 70px 30px;
+    }
+}
+
+@media (max-width:630px){
+    .textoAbogados{
+        margin: 25px 0px;
+    }
+    .asideAbogados{
+        text-align: center;
+    }
+}
+
+@media (max-width:463px){
+    .card{
+        width: 100%;
+    }
+    .nosotros{
+        margin: 40px 40px;
+    }
+    .abogados{
+        margin: 25px;
+    }
+    .asideAbogados{
+        margin: 25px 25px;
+    }
+    .asideAbogados img{
+        width: 100%;
+        height: 60vh;
+    }
+}
+
+
+
+
+
